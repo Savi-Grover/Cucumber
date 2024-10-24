@@ -1,0 +1,48 @@
+pipeline {
+  agent any
+  environment {
+    def CHROME_HOME = tool name: 'chrome_88', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
+    PATH = "$CHROME_HOME:$PATH"  
+  }
+	tools {
+        			gradle 'Gradle'
+      	  }
+  stages {
+
+    stage('checkout'){
+      steps {
+        sh '''export;which chrome;chrome --version;which chromedriver;chromedriver --version'''
+      }
+    }
+	
+	 stage('Script_execution') {
+                steps {
+                    tool name: 'Gradle', type: 'gradle'
+                     sh "pwd"
+                    sh "gradle -v"
+                    sh "ls"
+                    sh "gradle regressionSuite"
+					sh('''#!/bin/bash
+				    which java
+				    java -version
+				    ''')
+                }
+            }
+ 	 }
+  
+   post {
+			always{
+				cucumber buildStatus: 'UNSTABLE',
+                failedFeaturesNumber: 1,
+                failedScenariosNumber: 1,
+                skippedStepsNumber: 1,
+                failedStepsNumber: 1,                
+                reportTitle: 'Cucumber Jenkins Execution Report',
+                fileIncludePattern: 'target/json-cucumber-reports/cukejson.json',
+                sortingMethod: 'ALPHABETICAL',
+                trendsLimit: 100
+                		
+						
+			} 
+		}
+}

@@ -1,0 +1,68 @@
+# Cucumber Framework 
+
+## Minimum Requirements
+1. OpenJDK 17
+2. Gradle 8.5
+3. Any IDE which supports java (Eclipse)
+ 
+
+## Introduction:
+
+Behavior Driven Development
+Behavior Driven testing is an extension of TDD. Like in TDD, we write tests first and the add application code in BDD as well. The major difference that we get to see here are
+
+Tests are written in plain descriptive English type grammar Tests are explained as behavior of application and more user focused using examples to clarify requirements. This difference brings in the need to have a language which can define, in an understandable format.
+
+## Features of BDD
+
+	1. Collaboration between Business stakeholders, Business Analysts, QA Team and developers
+	2. Ubiquitous language, it is easy to describe 
+	3. Driven by Business Value 
+	4. Extends Test Driven Development (TDD) by utilizing natural language that non technical stakeholders can understand  
+	5. BDD frameworks such as Cucumber are an enabler, acting a “bridge” between Business & Technical Language
+
+## What is Cucumber?
+
+Cucumber is a testing framework which supports Behavior Driven Development (BDD). It lets us define application behavior in plain meaningful English text using a simple grammar defined by a language called Gherkin.
+
+## About the Project
+
+This is a gradle built project in *Java*, which enable users to create test cases in the form of features and scenarios using Gherkin language protocol. The framework has been built using Cucumber and Selenium.
+
+
+## Framework features
+
+1. Provide feasibility to draft features and Scenarios using plain text language
+2. Framework follows POM and PageFactory Model
+3. Framework supports both Junit and TestNG.
+4. Parllel Execution of scenarios is supported using TestNG.
+5. Framework can be used to automate different web applications
+6. Any key features or changes can be easily implemented to this framework with minimal coding effort
+
+
+
+## Installation
+
+For more details on how to install the required software - 
+
+https://github.ford.com/Test-Automation-CoE/CucumberFramework/wiki/01.-Setup-and-Installation-of-the-Cucumber-Framwork
+
+
+you can also check the wiki link for setup and other additional information 
+https://github.ford.com/Test-Automation-CoE/CucumberFramework/wiki
+
+
+
+## Contact
+
+Ford Drive Testing Team 
+Avinash Vanukuri-avanukur
+Savi Grover- sgrover7
+Sangeetha T - ST37
+SriDevi Medisetti - smedis2
+
+=======
+# vehicle-reservations-cucumber
+
+# vehicle-reservations-Ops-dashboard-billingUI
+# vehicle-reservations-Ops-dashboard-billingUI
